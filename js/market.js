@@ -1,15 +1,15 @@
 const productos = [
     
-    {nombre: "Leche" , precio: 45 },
-    {nombre: "Azucar" , precio: 80},
-    {nombre: "Mermelada" , precio: 200},
-    {nombre: "Pan" , precio: 100},
-    {nombre: "Cafe" , precio: 150},
-    {nombre: "Fideos" , precio: 450},
-    {nombre: "Manteca" , precio: 250},
-    {nombre: "Salsa" , precio: 300},
-    {nombre: "Salchichas" , precio: 500},
-    {nombre: "Papas" , precio: 75},
+    {nombre: "leche" , precio: 45 },
+    {nombre: "azucar" , precio: 80},
+    {nombre: "mermelada" , precio: 200},
+    {nombre: "pan" , precio: 100},
+    {nombre: "cafe" , precio: 150},
+    {nombre: "fideos" , precio: 450},
+    {nombre: "manteca" , precio: 250},
+    {nombre: "salsa" , precio: 300},
+    {nombre: "salchichas" , precio: 500},
+    {nombre: "papas" , precio: 75},
 ] 
 let carrito = []
 
@@ -32,36 +32,36 @@ while(compra != "no"){
     let producto = prompt("elija su producto")
     let precio = 0
 
-    if(producto == 'Leche'||producto == "Azucar"||producto =="Mermelada" ||producto == "Pan"||producto =="Cafe" ||producto =="Fideos" ||producto =="Manteca"||producto =="Salsa"||producto =="Salchichas"||producto =="Papa"){
+    if(producto == 'leche'||producto == "azucar"||producto =="mermelada" ||producto == "pan"||producto =="cafe" ||producto =="fideos" ||producto =="manteca"||producto =="salsa"||producto =="salchichas"||producto =="papa"){
         switch(producto){
-            case "Leche":
+            case "leche":
              precio = 45;
              break;
-            case "Azucar":
+            case "azucar":
              precio = 80 ;
              break;
-            case "Mermelada":
+            case "mermelada":
              precio = 200;
              break;
-            case "Pan":
+            case "pan":
              precio = 10;
              break;
-            case "Cafe":
+            case "cafe":
              precio = 150;
              break;
-            case "Fideos":
+            case "fideos":
              precio = 450;
              break;
-            case "Manteca":
+            case "manteca":
              precio = 250;
              break;
-            case "Salsa":
+            case "salsa":
              precio = 350;
              break;
-            case "Salchichas":
+            case "salchichas":
              precio = 500;
              break;
-            case "Papa":
+            case "papa":
              precio = 75;
              break;
             default:
@@ -80,11 +80,11 @@ while(compra != "no"){
     while(compra === "no"){
         alert("gracias por su compre, vuelva pronto")
         carrito.forEach((carritoFinal) => {
-           document.write(`producto: ${carritoFinal.producto}, unidades${carritoFinal.cantidad}, total a pagar por producto ${carritoFinal.cantidad * carritoFinal.precio}`)
+           document.write(`Producto: \n ${carritoFinal.producto}, \n unidades ${carritoFinal.cantidad},  \n total a pagar por producto ${carritoFinal.cantidad * carritoFinal.precio}. `)
         })
         break;
     }
 }
 
 const totalDeLaCompra = carrito.reduce ((acumulador, elemento)=>acumulador + elemento.precio * elemento.cantidad, 0 )
-document.write(`el total de la compra es: ${totalDeLaCompra}`)
+document.write(` \n El total de la compra es: ${totalDeLaCompra}`) 
